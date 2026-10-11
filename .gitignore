@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db
+
+# Immutable raw downloads and large GIS artifacts stay local
+data/raw/**
+!data/raw/.gitkeep
+data/reference/**
+!data/reference/.gitkeep
+
+# Staging regenerable locally; product UI ships synced copies under web/data/
+data/staging/**
+!data/staging/.gitkeep
+!data/staging/ps_crime.csv
+
+*.parquet
+*.pmtiles
+*.7z
+*.zip

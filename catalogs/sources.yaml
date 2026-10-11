@@ -1,0 +1,269 @@
+# Machine-readable inventory for Bengaluru women's safety data collection.
+# Tiers: A = direct CSV/download, B = PDF extract, C = document-only (no collect)
+
+version: 1
+city_focus: Bengaluru
+geo_aliases:
+  - Bengaluru
+  - Bangalore
+  - Bengaluru City
+  - Bengaluru Urban
+  - Bangalore City
+  - BBMP
+
+sources:
+  - id: opencity_bengaluru_crime_2023
+    name: OpenCity — Bengaluru Crime Data 2023
+    tier: A
+    family: opencity
+    url: https://data.opencity.in/dataset/bengaluru-crime-data-2023
+    ckan_package: bengaluru-crime-data-2023
+    ckan_base: https://data.opencity.in
+    access_method: ckan_download
+    formats: [csv, pdf]
+    year_coverage: "2021-2023"
+    geographic_coverage: Bengaluru City
+    licensing: Other (Public Domain) / OpenCity redistribution of BCP
+    update_frequency: annual
+    estimated_value: High
+    notes: Includes Crimes Against Women CSV (reported/detected by type).
+
+  - id: opencity_karnataka_crime_2022
+    name: OpenCity — Karnataka Crime Data 2022
+    tier: A
+    family: opencity
+    url: https://data.opencity.in/dataset/karnataka-crime-data-2022
+    ckan_package: karnataka-crime-data-2022
+    ckan_base: https://data.opencity.in
+    access_method: ckan_download
+    formats: [csv, pdf]
+    year_coverage: "2022"
+    geographic_coverage: Karnataka districts and cities
+    licensing: Other (Public Domain)
+    update_frequency: annual
+    estimated_value: High
+
+  - id: opencity_karnataka_crime_2023
+    name: OpenCity — Karnataka Crime Data 2023
+    tier: A
+    family: opencity
+    url: https://data.opencity.in/dataset/karnataka-crime-data-2023
+    ckan_package: karnataka-crime-data-2023
+    ckan_base: https://data.opencity.in
+    access_method: ckan_download
+    formats: [csv, pdf]
+    year_coverage: "2023"
+    geographic_coverage: Karnataka districts and cities
+    licensing: Other (Public Domain)
+    update_frequency: annual
+    estimated_value: High
+    notes: Includes sexual harassment district/city CSV when available.
+
+  - id: opencity_karnataka_crime_2024
+    name: OpenCity — Karnataka Crime Data 2024
+    tier: A
+    family: opencity
+    url: https://data.opencity.in/dataset/karnataka-crime-data-2024
+    ckan_package: karnataka-crime-data-2024
+    ckan_base: https://data.opencity.in
+    access_method: ckan_download
+    formats: [csv, pdf]
+    year_coverage: "2024"
+    geographic_coverage: Karnataka districts and cities
+    licensing: Other (Public Domain)
+    update_frequency: annual
+    estimated_value: High
+
+  - id: opencity_karnataka_crime_2025
+    name: OpenCity — Karnataka Crime Data 2025
+    tier: A
+    family: opencity
+    url: https://data.opencity.in/dataset/karnataka-crime-data-2025
+    ckan_package: karnataka-crime-data-2025
+    ckan_base: https://data.opencity.in
+    access_method: ckan_download
+    formats: [csv, pdf]
+    year_coverage: "2025"
+    geographic_coverage: Karnataka districts and cities
+    licensing: Other (Public Domain)
+    update_frequency: annual
+    estimated_value: Medium
+
+  - id: idp_district_caw_2017
+    name: India Data Portal — Districtwise Crime Against Women 2017 onwards
+    tier: A
+    family: india_data_portal
+    url: https://ckandev.indiadataportal.com/dataset/crime-statistics/resource/c8d3ea7e-4855-45f3-9c26-557419e93b6a
+    download_url: https://ckandev.indiadataportal.com/dataset/e311a510-ce48-4f4c-baf6-0ec5f9278285/resource/c8d3ea7e-4855-45f3-9c26-557419e93b6a/download/districtwise-crime-against-women-2017-onwards.csv
+    access_method: http_download
+    formats: [csv]
+    year_coverage: "2017-2022"
+    geographic_coverage: India districts (filter Karnataka / Bengaluru)
+    licensing: No license listed on portal; derived from NCRB CII
+    update_frequency: yearly
+    estimated_value: High
+
+  - id: datagovin_district_caw_catalog
+    name: data.gov.in — District-wise crimes committed against Women
+    tier: A
+    family: data_gov_in
+    url: https://www.data.gov.in/catalog/district-wise-crimes-committed-against-women
+    access_method: portal_catalog
+    formats: [csv, zip]
+    year_coverage: "historical (varies by resource; often pre-2017)"
+    geographic_coverage: India districts
+    licensing: NDSAP
+    update_frequency: irregular
+    estimated_value: Medium
+    notes: Catalog API may require API key. Collector attempts public resource links.
+
+  - id: opencity_bbmp_wards
+    name: OpenCity — BBMP Ward Information / Delimitation
+    tier: A
+    family: gis_opencity
+    url: https://data.opencity.in/dataset/bbmp-ward-information
+    ckan_package: bbmp-ward-information
+    ckan_base: https://data.opencity.in
+    access_method: ckan_download
+    formats: [kml, csv, pdf]
+    year_coverage: "2015, 2022, 2023"
+    geographic_coverage: BBMP wards
+    licensing: Other (Public Domain)
+    update_frequency: after delimitation
+    estimated_value: High
+    target_dir: reference
+
+  - id: opencity_bbmp_wards_2023
+    name: OpenCity — BBMP Wards Delimitation 2023
+    tier: A
+    family: gis_opencity
+    url: https://data.opencity.in/dataset/bbmp-wards-delimitation-2023
+    ckan_package: bbmp-wards-delimitation-2023
+    ckan_base: https://data.opencity.in
+    access_method: ckan_download
+    formats: [kml, pdf]
+    year_coverage: "2023"
+    geographic_coverage: BBMP 225 wards
+    licensing: Other (Public Domain)
+    update_frequency: after delimitation
+    estimated_value: High
+    target_dir: reference
+
+  - id: opencity_police_stations
+    name: OpenCity — Police Station Locations Karnataka / Bengaluru
+    tier: A
+    family: gis_opencity
+    url: https://data.opencity.in/dataset/police-station-locations
+    ckan_package: police-station-locations
+    ckan_base: https://data.opencity.in
+    access_method: ckan_download
+    formats: [kml]
+    year_coverage: "point-in-time (may lag new stations)"
+    geographic_coverage: Karnataka / Bengaluru Urban
+    licensing: Other (Public Domain); source KSRSAC
+    update_frequency: irregular
+    estimated_value: High
+    target_dir: reference
+
+  - id: opencity_police_jurisdictions
+    name: OpenCity — Police Jurisdiction Maps (Bengaluru)
+    tier: A
+    family: gis_opencity
+    url: https://data.opencity.in/dataset/police-jurisdiction-maps-for-major-cities-of-india
+    ckan_package: police-jurisdiction-maps-for-major-cities-of-india
+    ckan_base: https://data.opencity.in
+    access_method: ckan_download
+    formats: [kml, geojson, zip]
+    year_coverage: "point-in-time"
+    geographic_coverage: Major cities incl. Bengaluru
+    licensing: Other (Public Domain)
+    update_frequency: irregular
+    estimated_value: High
+    target_dir: reference
+
+  - id: india_geodata_kn_police_boundaries
+    name: india-geodata — Karnataka Police Station Boundaries (KGIS)
+    tier: A
+    family: gis_github
+    url: https://github.com/yashveeeeeeer/india-geodata/releases/tag/police%2Fjurisdictions
+    download_urls:
+      - https://github.com/yashveeeeeeer/india-geodata/releases/download/police%2Fjurisdictions/KGISMAPS_KN_Police_Station_Boundaries.parquet
+      - https://github.com/yashveeeeeeer/india-geodata/releases/download/police%2Fjurisdictions/KGISMAPS_KN_Police_Station_Boundaries.pmtiles
+    access_method: http_download
+    formats: [parquet, pmtiles]
+    year_coverage: "point-in-time"
+    geographic_coverage: Karnataka
+    licensing: See upstream repo; compiled from KGISMAPS
+    update_frequency: irregular
+    estimated_value: High
+    target_dir: reference
+
+  - id: ncrb_crime_in_india_pdfs
+    name: NCRB — Crime in India annual reports (PDF)
+    tier: B
+    family: ncrb_pdf
+    url: https://ncrb.gov.in/crime-in-india.html
+    access_method: pdf_download
+    formats: [pdf]
+    year_coverage: "2012-present (annual)"
+    geographic_coverage: India; metro cities and districts in tables
+    licensing: Government of India publication; check reuse terms
+    update_frequency: annual
+    estimated_value: High
+    notes: Used to backfill years missing from CSVs. Collector discovers PDF links.
+
+  - id: ncrb_caw_backfill_2012_2016
+    name: NCRB — CAW chapter/table/XLSX backfill 2012-2016
+    tier: B
+    family: ncrb_backfill
+    url: https://www.ncrb.gov.in/crime-in-india-table-content.html
+    access_method: pdf_xlsx_download
+    formats: [pdf, xlsx, xls]
+    year_coverage: "2012-2016"
+    geographic_coverage: Bengaluru/Bangalore city + district rows in CAW tables
+    licensing: Government of India publication; check reuse terms
+    update_frequency: one-time historical backfill
+    estimated_value: High
+    notes: Downloads chapter-5 / Table-5.x / district CAW Excel; extracts Bengaluru rows into staging.
+
+  - id: media_archives
+    name: Media archives (Deccan Herald, ToI, Hindu, IE, Citizen Matters)
+    tier: C
+    family: media
+    url: null
+    access_method: none
+    formats: [html]
+    year_coverage: varies
+    geographic_coverage: Bengaluru
+    licensing: Copyright / ToS — do not scrape in Phase 1
+    update_frequency: continuous
+    estimated_value: Medium (later NLP geocoding)
+    notes: Documented only; not collected.
+
+  - id: ecourts
+    name: eCourts / High Court / District Court records
+    tier: C
+    family: judicial
+    url: https://ecourts.gov.in
+    access_method: none
+    formats: [html, pdf]
+    year_coverage: varies
+    geographic_coverage: India
+    licensing: Restricted; high PII risk
+    update_frequency: continuous
+    estimated_value: Low for street safety mapping
+    notes: Documented only; not collected.
+
+  - id: synthetic_kaggle_geospatial
+    name: Kaggle synthetic Indian women safety geospatial datasets
+    tier: C
+    family: synthetic
+    url: https://www.kaggle.com/datasets/soumyodipthanadar/indian-women-safety-geospatial-dataset
+    access_method: none
+    formats: [csv]
+    year_coverage: n/a
+    geographic_coverage: synthetic metros
+    licensing: dataset-specific
+    update_frequency: n/a
+    estimated_value: None for production corpus
+    notes: EXCLUDE from production. Synthetic only.

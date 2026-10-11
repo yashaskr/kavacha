@@ -1,0 +1,32 @@
+{
+  "disclaimer": "Reference geography only. These layers are administrative / facility boundaries and locations. They are not crime incident points and must not be used for choropleth safety scores without official sub-city counts.",
+  "layers": [
+    {
+      "id": "police_stations",
+      "label": "Police stations",
+      "file": "data/geo/police_stations.geojson",
+      "feature_count": 135,
+      "bytes": 43263,
+      "default_on": true,
+      "source_kml": "data/reference/opencity_police_stations/2026-10-11/Bengaluru Urban Police Station Locations.kml"
+    },
+    {
+      "id": "police_jurisdictions",
+      "label": "Police jurisdictions",
+      "file": "data/geo/police_jurisdictions.geojson",
+      "feature_count": 120,
+      "bytes": 278961,
+      "default_on": true,
+      "source_kml": "data/reference/opencity_police_jurisdictions/2026-10-11/Bengaluru Police Jurisdictions Map.kml"
+    },
+    {
+      "id": "bbmp_wards_2023",
+      "label": "BBMP wards (2023)",
+      "file": "data/geo/bbmp_wards_2023.geojson",
+      "feature_count": 225,
+      "bytes": 526031,
+      "default_on": false,
+      "source_kml": "data/reference/opencity_bbmp_wards_2023/2026-10-11/BBMP Final Wards Map - 2023.kml"
+    }
+  ]
+}

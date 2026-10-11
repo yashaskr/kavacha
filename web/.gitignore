@@ -1,0 +1,3 @@
+# Keep synced CSVs in repo for a runnable UI; ignore local junk only
+.DS_Store
+*.local
